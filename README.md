@@ -229,6 +229,22 @@ See CollisionStrategy in CollisionStrategy.java
 - EnemyCollisionStrategy in EnemyCollisionStrategy.java
 - PassiveCollisionStrategy in PassiveCollisionStrategy.java
 
+###### Memento
+
+DataManager
+
+###### Observer
+
+Scoreboard
+
+###### Facade
+
+LevelLoader
+
+###### Decorator
+
+SquarecatStateImpl
+
 ###### Context
 
 See DynamicEntityImpl in DynamicEntityImpl.java
