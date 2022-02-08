@@ -24,6 +24,11 @@ Pressing up will boost the bounce height, with a maximum bounce height being the
 
 Pressing left or right will move the entity in the given direction.
 
+Pressing `s` will save the current game's state.
+
+Pressing `q` will load that saved state.
+- Only one save file possible at a time. Previous save file will be overwritten.
+
 Lifting the left or right key after pressing it, without having at least one of the two keys down, will result
 in the bounce height being reduced.
 
@@ -117,6 +122,36 @@ The finish is configured as shown below:
     "width": 40
   }
 ```
+
+Score colour and Squarecat config settings inclusion in every level array is mandatory for correct game function.
+
+Score colour requires all images to be coded correctly with their corresponding colours of preference.
+
+Score colour is to be set at the base level of each array.
+```json
+"_scoreColourComment": "Score for taking down enemy of certain colour dependent on image name",
+    "scoreColour": {
+    "slimeRa.png": "red",
+    "slimeBa.png": "blue",
+    "slimeGa.png": "green",
+    "slimePa.png": "purple",
+    "slimeYa.png": "yellow"
+```
+
+Squarecat settings are to be set amongst generalEntities array.
+```json
+{
+  "type": "squarecat",
+  "image": "squarecat.png",
+  "_sizeComment": "options include small, medium, large. If not specified this field will default to medium",
+  "size": "medium",
+  "distanceFromHero": 50.0,
+  "velocity": 2.0
+}
+```
+The size of squarecat can be configured just like the ballboy.
+
+The distance for how far the square cat orbits the hero in a square pathway can also be configured along with its speed/velocity.
 
 The complete configuration shown above is sourced from `config.json` in the resources directory.
 
